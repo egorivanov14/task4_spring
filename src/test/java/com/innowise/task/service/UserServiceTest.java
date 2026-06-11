@@ -69,7 +69,7 @@ public class UserServiceTest {
   }
 
   @Test
-  public void shouldReturnTokenToLogin() {
+  public void shouldReturnTokenToLogin() { //todo constants
     LoginUserRequest request = new LoginUserRequest("1", "123456789");
 
     UserDetails userDetails = mock(UserDetails.class);
@@ -84,6 +84,4 @@ public class UserServiceTest {
     assertThat(response).isNotNull();
     assertThat(response.getAccessToken()).isEqualTo("fake_token");
   }
-
-
 }
